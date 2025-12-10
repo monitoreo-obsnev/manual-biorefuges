@@ -78,14 +78,14 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Manual de usuario de MonitorEO-OBSNEV - Biore},
+  pdftitle={Manual de usuario de MonitorEO-OBSNEV Bio-Refugios},
   pdfauthor={Observatorio de Cambio Global de Sierra Nevada},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Manual de usuario de MonitorEO-OBSNEV - Biore}
+\title{Manual de usuario de MonitorEO-OBSNEV Bio-Refugios}
 \author{Observatorio de Cambio Global de Sierra Nevada}
-\date{2025-12-09}
+\date{2025-12-10}
 
 \begin{document}
 \maketitle
@@ -100,13 +100,12 @@
 
 Este manual de usuario proporciona una guía completa para el uso de MonitorEO-OBSNEV, incluyendo la descripción de funcionalidades, navegación por la interfaz, selección de parámetros y visualización de resultados.
 
-Este proyecto ha sido desarrollado en el marco del trabajo del Observatorio de Cambio Global de Sierra Nevada, de la Universidad de Granada, a través de los proyectos:
+Este proyecto ha sido desarrollado en el marco del trabajo del Observatorio de Cambio Global de Sierra Nevada, de la Universidad de Granada, a través del proyecto:
 
 \begin{itemize}
+\tightlist
 \item
-  ``EVEREST'' (PID2023-151939OB-I00), financiado por el Ministerio de Ciencia, Innovación y Universidades (MICIU) / Agencia Estatal de Investigación (AEI) 10.13039/501100011033, y cofinanciado por el Fondo Europeo de Desarrollo Regional (FEDER -- Unión Europea).
-\item
-  ``Observaciones de la Tierra para la caracterización y seguimiento del funcionamiento de los ecosistemas en Sierra Nevada (España)'' (C-EXP-074-UGR23), cofinanciado por el Programa FEDER 2014-2020 y la Consejería de Economía, Conocimiento, Empresa y Universidades de la Junta de Andalucía.
+  \textbf{Biorefuges}
 \end{itemize}
 
 \includegraphics[width=8.85417in,height=\textheight,keepaspectratio]{assets/logo_monitoreoobsnev.png}
@@ -149,6 +148,9 @@ MonitorEO-OBSNEV integra colecciones de datos satelitales, herramientas de anál
 En esta sección puedes definir la \textbf{región de interés (ROI)} sobre la que se realizará el análisis. Tienes varias opciones disponibles para seleccionar o cargar tu área de estudio. Por defecto, la herramienta está configurada para dibujar polígonos personalizados. Para cambiar el tipo de geometría (por ejemplo, a punto o rectángulo), accede al menú de opciones de dibujo antes de definir la región de interés.
 
 \pandocbounded{\includegraphics[keepaspectratio]{assets/ROI_es.png}}
+\#\# \textbf{BioRefuges}
+
+Puedes seleccionar una de las áreas de cuencas de Sierra Nevada, áreas estudio del proyecto BioRefuges
 
 \section{\texorpdfstring{\textbf{🖊️ Dibujar tu región de interés (ROI - Region of Interest)}}{🖊️ Dibujar tu región de interés (ROI - Region of Interest)}}\label{dibujar-tu-regiuxf3n-de-interuxe9s-roi---region-of-interest}
 
@@ -389,6 +391,18 @@ Unidades: sin unidad.
 El índice de clorofila-a se utiliza para estimar la concentración de clorofila-a en cuerpos de agua como océanos, lagos y ríos. La clorofila-a es el principal pigmento fotosintético presente en el fitoplancton, por lo que su concentración actúa como un indicador indirecto de la biomasa algal y de la productividad primaria en ecosistemas acuáticos, siendo un indicador clave para evaluar la calidad del agua y la salud de los ecosistemas acuáticos (Gitelson et al., 1993; IOCCG, 2000).
 
 Unidades: mg m-3.
+
+\section{\texorpdfstring{\textbf{Modelos}}{Modelos}}\label{modelos}
+
+\subsection{\texorpdfstring{\textbf{Modelo de Pastos}\\
+}{Modelo de Pastos }}\label{modelo-de-pastos}
+
+El modelo de producción de pastos integrado en la aplicación estima la Energía Metabólica Disponible (EMD) en Andalucía a partir de información ambiental y de vegetación. Para ello, delimita los pisos bioclimáticos según los criterios de Rivas-Martínez, aplica las ecuaciones de Passera Sassi (1999) en función del tipo de pasto y las condiciones climáticas, e incorpora capas de cobertura vegetal y precipitación. Además, se utiliza una medida de similitud (Distancia de Mahalanobis) para restringir el resultado a áreas con características ambientales equivalentes a los sitios originales de calibración. El producto final es un mapa de EMD que representa el potencial de recursos forrajeros en la región con distintos niveles de confianza.
+
+\subsection{\texorpdfstring{\textbf{Modelo de Temperatura}\\
+}{Modelo de Temperatura }}\label{modelo-de-temperatura}
+
+El modelo de predicción de temperatura utiliza datos procedentes de sensores instalados a diferentes alturas en el suelo (subterráneo, a ras de suelo y ligeramente por encima) para estimar la temperatura en áreas donde no existe medición directa. A partir de la distancia a los sensores y de sus registros, el modelo genera superficies continuas de temperatura para cada una de las tres alturas, interpolando y extrapolando los valores medidos. De este modo, la aplicación permite visualizar y analizar la variabilidad espacial de la temperatura cerca del suelo, información clave para la evaluación microclimática y el comportamiento de la vegetación.
 
 \section{\texorpdfstring{\textbf{🌞 Balance de Radiación}}{🌞 Balance de Radiación}}\label{balance-de-radiaciuxf3n}
 

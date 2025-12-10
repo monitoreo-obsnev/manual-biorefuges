@@ -56,6 +56,16 @@ El índice de clorofila-a se utiliza para estimar la concentración de clorofila
 Unidades: mg m-3.
 
 
+## **📊 Modelos** 
+
+### **Modelo de Pastos** \
+
+El modelo de producción de pastos integrado en la aplicación estima la Energía Metabólica Disponible (EMD) en Andalucía a partir de información ambiental y de vegetación. Para ello, delimita los pisos bioclimáticos según los criterios de Rivas-Martínez, aplica las ecuaciones de Passera Sassi (1999) en función del tipo de pasto y las condiciones climáticas, e incorpora capas de cobertura vegetal y precipitación. Además, se utiliza una medida de similitud (Distancia de Mahalanobis) para restringir el resultado a áreas con características ambientales equivalentes a los sitios originales de calibración. El producto final es un mapa de EMD que representa el potencial de recursos forrajeros en la región con distintos niveles de confianza.
+
+### **Modelo de Temperatura** \
+
+El modelo de predicción de temperatura utiliza datos procedentes de sensores instalados a diferentes alturas en el suelo (subterráneo, a ras de suelo y ligeramente por encima) para estimar la temperatura en áreas donde no existe medición directa. A partir de la distancia a los sensores y de sus registros, el modelo genera superficies continuas de temperatura para cada una de las tres alturas, interpolando y extrapolando los valores medidos. De este modo, la aplicación permite visualizar y analizar la variabilidad espacial de la temperatura cerca del suelo, información clave para la evaluación microclimática y el comportamiento de la vegetación.
+
 ## **🌞 Balance de Radiación** 
 
 

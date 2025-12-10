@@ -6,6 +6,9 @@ En esta sección puedes definir la **región de interés (ROI)** sobre la que se
 
 
 ![](assets/ROI_es.png)
+## **🌱️BioRefuges**
+
+Puedes seleccionar una de las áreas de cuencas de Sierra Nevada, áreas estudio del proyecto BioRefuges
 
 ## **🖊️ Dibujar tu región de interés (ROI \- Region of Interest)**
 
