@@ -85,7 +85,7 @@
 
 \title{Manual de usuario de MonitorEO-OBSNEV Bio-Refugios}
 \author{Observatorio de Cambio Global de Sierra Nevada}
-\date{2025-12-10}
+\date{2025-12-11}
 
 \begin{document}
 \maketitle
@@ -105,7 +105,7 @@ Este proyecto ha sido desarrollado en el marco del trabajo del Observatorio de C
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Biogenic Refuges as modulators of Climate Change in mountain ecosystems (Mountain BIOREFUGES)} financiado por MCIN/AEI/10.13039/501100011033 y por la Unión Europea NextGenerationEU/ PRTR
+  \textbf{REFUGIOS BIOGENICOS COMO MODULADORES DEL CAMBIO CLIMATICO TED2021-130888B-I00} financiado por MCIN/AEI/10.13039/501100011033 y por la Unión Europea NextGenerationEU/ PRTR
 \end{itemize}
 
 \includegraphics[width=8.85417in,height=\textheight,keepaspectratio]{assets/logo-biorefuges.PNG}
@@ -148,7 +148,8 @@ MonitorEO-OBSNEV integra colecciones de datos satelitales, herramientas de anál
 En esta sección puedes definir la \textbf{región de interés (ROI)} sobre la que se realizará el análisis. Tienes varias opciones disponibles para seleccionar o cargar tu área de estudio. Por defecto, la herramienta está configurada para dibujar polígonos personalizados. Para cambiar el tipo de geometría (por ejemplo, a punto o rectángulo), accede al menú de opciones de dibujo antes de definir la región de interés.
 
 \pandocbounded{\includegraphics[keepaspectratio]{assets/ROI_es.png}}
-\#\# \textbf{🌱BioRefuges}
+
+\section{\texorpdfstring{🌱 \textbf{BioRefuges}}{🌱 BioRefuges}}\label{biorefuges}
 
 Puedes seleccionar una de las áreas de cuencas de Sierra Nevada, áreas estudio del proyecto BioRefuges.
 
@@ -402,7 +403,7 @@ El modelo de producción de pastos integrado en la aplicación estima la Energí
 \subsection{\texorpdfstring{\textbf{Modelo de Temperatura}\\
 }{Modelo de Temperatura }}\label{modelo-de-temperatura}
 
-El modelo de predicción de temperatura utiliza datos procedentes de sensores instalados a diferentes alturas en el suelo (subterráneo, a ras de suelo y ligeramente por encima) para estimar la temperatura en áreas donde no existe medición directa. A partir de la distancia a los sensores y de sus registros, el modelo genera superficies continuas de temperatura para cada una de las tres alturas, interpolando y extrapolando los valores medidos. De este modo, la aplicación permite visualizar y analizar la variabilidad espacial de la temperatura cerca del suelo, información clave para la evaluación microclimática y el comportamiento de la vegetación.
+El modelo de predicción de temperatura combina los datos de los sensores TOMST TMS4 del Observatorio de Cambio Global de Sierra Nevada ---que miden de forma continua la temperatura del suelo a tres profundidades (−8 cm, 2 cm y 15 cm)--- con imágenes satelitales de Sentinel-2 y Landsat 8/9. Para cada sensor se toma el píxel satelital correspondiente al momento del dato y se integran además variables del terreno como la altitud, la pendiente o la orientación. Con esta información, la aplicación entrena modelos de regresión Random Forest, capaces de relacionar las observaciones satelitales con las condiciones reales medidas en campo. El resultado son mapas continuos de temperatura del suelo para cada profundidad, que permiten visualizar y analizar la variabilidad microclimática en zonas sin instrumentación directa.
 
 \section{\texorpdfstring{\textbf{🌞 Balance de Radiación}}{🌞 Balance de Radiación}}\label{balance-de-radiaciuxf3n}
 

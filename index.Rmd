@@ -20,7 +20,7 @@ Este manual de usuario proporciona una guía completa para el uso de MonitorEO-O
 
 Este proyecto ha sido desarrollado en el marco del trabajo del Observatorio de Cambio Global de Sierra Nevada, de la Universidad de Granada, a través del proyecto:
 
-- **Biogenic Refuges as modulators of Climate Change in mountain ecosystems (Mountain BIOREFUGES)** financiado por MCIN/AEI/10.13039/501100011033 y por la Unión Europea NextGenerationEU/ PRTR
+- **REFUGIOS BIOGENICOS COMO MODULADORES DEL CAMBIO CLIMATICO TED2021-130888B-I00** financiado por MCIN/AEI/10.13039/501100011033 y por la Unión Europea NextGenerationEU/ PRTR
 
 
 

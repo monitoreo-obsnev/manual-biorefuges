@@ -64,7 +64,7 @@ El modelo de producción de pastos integrado en la aplicación estima la Energí
 
 ### **Modelo de Temperatura** \
 
-El modelo de predicción de temperatura utiliza datos procedentes de sensores instalados a diferentes alturas en el suelo (subterráneo, a ras de suelo y ligeramente por encima) para estimar la temperatura en áreas donde no existe medición directa. A partir de la distancia a los sensores y de sus registros, el modelo genera superficies continuas de temperatura para cada una de las tres alturas, interpolando y extrapolando los valores medidos. De este modo, la aplicación permite visualizar y analizar la variabilidad espacial de la temperatura cerca del suelo, información clave para la evaluación microclimática y el comportamiento de la vegetación.
+El modelo de predicción de temperatura combina los datos de los sensores TOMST TMS4 del Observatorio de Cambio Global de Sierra Nevada —que miden de forma continua la temperatura del suelo a tres profundidades (−8 cm, 2 cm y 15 cm)— con imágenes satelitales de Sentinel-2 y Landsat 8/9. Para cada sensor se toma el píxel satelital correspondiente al momento del dato y se integran además variables del terreno como la altitud, la pendiente o la orientación. Con esta información, la aplicación entrena modelos de regresión Random Forest, capaces de relacionar las observaciones satelitales con las condiciones reales medidas en campo. El resultado son mapas continuos de temperatura del suelo para cada profundidad, que permiten visualizar y analizar la variabilidad microclimática en zonas sin instrumentación directa.
 
 ## **🌞 Balance de Radiación** 
 
