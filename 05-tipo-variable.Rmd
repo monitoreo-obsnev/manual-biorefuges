@@ -4,78 +4,6 @@ Selecciona la variable de estudio. Las variables se clasifican en grandes catego
 
 ![](assets/variables.png)
 
-## **🌱 Carbono Orgánico (Producción Primaria)** 
-
-### **NDVI** \- Índice de Vegetación de Diferencia Normalizada
-
-El Índice de Vegetación de Diferencia Normalizada (NDVI, por sus siglas en inglés) es un indicador espectral ampliamente utilizado para cuantificar la cobertura y el estado de la vegetación mediante sensores remotos. Se calcula a partir de la diferencia entre la reflectancia en el infrarrojo cercano (NIR) y la reflectancia en el rojo (RED), normalizada por su suma:
-
-NDV I= NIR- RED / NIR \+ RED
-
-Este índice toma valores entre \-1 y 1\. Valores cercanos a 1 indican vegetación densa y vigorosa, mientras que valores cercanos a \-1 corresponden a superficies no vegetadas, como cuerpos de agua, nieve o áreas urbanas. 
-
-Unidades: sin unidad.
-
-
-### **EVI** \- Índice de Vegetación Mejorado
-
-El Índice de Vegetación Mejorado (EVI, por sus siglas en inglés) es un indicador espectral desarrollado para optimizar la estimación de la cobertura y condición de la vegetación a partir de datos de teledetección. A diferencia de índices tradicionales como el NDVI, el EVI incorpora factores de corrección atmosférica y una compensación por la influencia del fondo del suelo, lo que mejora su sensibilidad en áreas con alta densidad de vegetación, baja cobertura vegetal o condiciones atmosféricas complejas.
-
-La fórmula general del EVI es la siguiente:
-
-EVI=G⋅ NIR−RED / NIR+C1​⋅RED−C2​⋅BLUE+L
-
-donde:
-
-* NIR: reflectancia en el infrarrojo cercano  
-* RED: reflectancia en el rojo  
-* BLUE: reflectancia en el azul  
-* G: factor de ganancia (generalmente 2.5)  
-* L: factor de corrección del suelo (1.0)  
-* C1 y C2​: coeficientes de corrección atmosférica (6.0 y 7.5, respectivamente)
-
-Los valores del EVI varían entre \-1 y 1\. Valores cercanos a 1 indican una vegetación densa y saludable, mientras que valores negativos o bajos reflejan áreas sin vegetación, como cuerpos de agua, zonas urbanizadas o superficies nevadas. 
-
-| Valor de EVI | Interpretación ecológica |
-| ----- | :---: |
-| **\< 0.0** | Agua, nieve, nubes, áreas no vegetadas |
-| **0.0 – 0.1** | Suelos desnudos, desiertos, áreas urbanas, rocas |
-| **0.1 – 0.2** | Vegetación escasa, pastizales áridos, matorral abierto |
-| **0.2 – 0.3** | Pastizales, agricultura de secano, sabanas |
-| **0.3 – 0.5** | Bosques abiertos, zonas agrícolas activas (cultivos en crecimiento) |
-| **0.5 – 0.7** | Bosques templados densos, cultivos con alta cobertura vegetal |
-| **\> 0.7** | Bosques tropicales, selvas, vegetación muy densa |
-
-Unidades: sin unidad.
-
-
-### **Chl-a** \- Concentración de clorofila
-
-El índice de clorofila-a se utiliza para estimar la concentración de clorofila-a en cuerpos de agua como océanos, lagos y ríos. La clorofila-a es el principal pigmento fotosintético presente en el fitoplancton, por lo que su concentración actúa como un indicador indirecto de la biomasa algal y de la productividad primaria en ecosistemas acuáticos, siendo un indicador clave para evaluar la calidad del agua y la salud de los ecosistemas acuáticos (Gitelson et al., 1993; IOCCG, 2000).
-
-Unidades: mg m-3.
-
-
-## **📊 Modelos** 
-
-### **Modelo de Pastos** \
-
-El modelo de producción de pastos integrado en la aplicación estima la Energía Metabólica Disponible (EMD) en Andalucía a partir de información ambiental y de vegetación. Para ello, delimita los pisos bioclimáticos según los criterios de Rivas-Martínez, aplica las ecuaciones de Passera Sassi (1999) en función del tipo de pasto y las condiciones climáticas, e incorpora capas de cobertura vegetal y precipitación. Además, se utiliza una medida de similitud (Distancia de Mahalanobis) para restringir el resultado a áreas con características ambientales equivalentes a los sitios originales de calibración. El producto final es un mapa de EMD que representa el potencial de recursos forrajeros en la región con distintos niveles de confianza.
-
-### **Modelo de Temperatura** \
-
-El modelo de predicción de temperatura combina los datos de los sensores TOMST TMS4 del Observatorio de Cambio Global de Sierra Nevada —que miden de forma continua la temperatura del suelo a tres profundidades (−8 cm, 2 cm y 15 cm)— con imágenes satelitales de Sentinel-2 y Landsat 8/9. Para cada sensor se toma el píxel satelital correspondiente al momento del dato y se integran además variables del terreno como la altitud, la pendiente o la orientación. Con esta información, la aplicación entrena modelos de regresión Random Forest, capaces de relacionar las observaciones satelitales con las condiciones reales medidas en campo. El resultado son mapas continuos de temperatura del suelo para cada profundidad, que permiten visualizar y analizar la variabilidad microclimática en zonas sin instrumentación directa.
-
-## **🌞 Balance de Radiación** 
-
-
-### **ALB** \- Albedo
-
-El albedo es la fracción de la radiación solar incidente que es reflejada por una superficie sin ser absorbida. Se trata de un parámetro adimensional que varía entre 0 (absorción total) y 1 (reflexión total). Un albedo elevado indica que la superficie refleja una gran proporción de la energía solar recibida, como ocurre en superficies altamente reflectantes como la nieve o el hielo. En contraste, un albedo bajo implica una mayor absorción de radiación, característica de superficies oscuras como áreas urbanas, suelos húmedos o cuerpos de agua.  
-El albedo desempeña un papel clave en el balance energético terrestre y en procesos relacionados con el clima global, ya que influye directamente en la cantidad de energía que entra y se retiene en el sistema climático.
-
-Unidades: sin unidad.
-
 ## **💧Balance de Agua** 
 
 
@@ -140,6 +68,17 @@ Estos umbrales pueden ajustarse según la resolución y el sensor utilizado.
 
 Unidades: sin unidad.
 
+## **🌞 Balance de Radiación** 
+
+
+### **ALB** \- Albedo
+
+El albedo es la fracción de la radiación solar incidente que es reflejada por una superficie sin ser absorbida. Se trata de un parámetro adimensional que varía entre 0 (absorción total) y 1 (reflexión total). Un albedo elevado indica que la superficie refleja una gran proporción de la energía solar recibida, como ocurre en superficies altamente reflectantes como la nieve o el hielo. En contraste, un albedo bajo implica una mayor absorción de radiación, característica de superficies oscuras como áreas urbanas, suelos húmedos o cuerpos de agua.  
+El albedo desempeña un papel clave en el balance energético terrestre y en procesos relacionados con el clima global, ya que influye directamente en la cantidad de energía que entra y se retiene en el sistema climático.
+
+Unidades: sin unidad.
+
+
 ## **🌡️ Calor Sensible**
 ###  **LST** \-Temperatura Superficial
 
@@ -147,6 +86,66 @@ La temperatura de la superficie terrestre (LST, por sus siglas en inglés) se re
 
 Unidades: ºC.
 
+## **🌱 Carbono Orgánico (Producción Primaria)** 
+
+### **NDVI** \- Índice de Vegetación de Diferencia Normalizada
+
+El Índice de Vegetación de Diferencia Normalizada (NDVI, por sus siglas en inglés) es un indicador espectral ampliamente utilizado para cuantificar la cobertura y el estado de la vegetación mediante sensores remotos. Se calcula a partir de la diferencia entre la reflectancia en el infrarrojo cercano (NIR) y la reflectancia en el rojo (RED), normalizada por su suma:
+
+NDV I= NIR- RED / NIR \+ RED
+
+Este índice toma valores entre \-1 y 1\. Valores cercanos a 1 indican vegetación densa y vigorosa, mientras que valores cercanos a \-1 corresponden a superficies no vegetadas, como cuerpos de agua, nieve o áreas urbanas. 
+
+Unidades: sin unidad.
+
+
+### **EVI** \- Índice de Vegetación Mejorado
+
+El Índice de Vegetación Mejorado (EVI, por sus siglas en inglés) es un indicador espectral desarrollado para optimizar la estimación de la cobertura y condición de la vegetación a partir de datos de teledetección. A diferencia de índices tradicionales como el NDVI, el EVI incorpora factores de corrección atmosférica y una compensación por la influencia del fondo del suelo, lo que mejora su sensibilidad en áreas con alta densidad de vegetación, baja cobertura vegetal o condiciones atmosféricas complejas.
+
+La fórmula general del EVI es la siguiente:
+
+EVI=G⋅ NIR−RED / NIR+C1​⋅RED−C2​⋅BLUE+L
+
+donde:
+
+* NIR: reflectancia en el infrarrojo cercano  
+* RED: reflectancia en el rojo  
+* BLUE: reflectancia en el azul  
+* G: factor de ganancia (generalmente 2.5)  
+* L: factor de corrección del suelo (1.0)  
+* C1 y C2​: coeficientes de corrección atmosférica (6.0 y 7.5, respectivamente)
+
+Los valores del EVI varían entre \-1 y 1\. Valores cercanos a 1 indican una vegetación densa y saludable, mientras que valores negativos o bajos reflejan áreas sin vegetación, como cuerpos de agua, zonas urbanizadas o superficies nevadas. 
+
+| Valor de EVI | Interpretación ecológica |
+| ----- | :---: |
+| **\< 0.0** | Agua, nieve, nubes, áreas no vegetadas |
+| **0.0 – 0.1** | Suelos desnudos, desiertos, áreas urbanas, rocas |
+| **0.1 – 0.2** | Vegetación escasa, pastizales áridos, matorral abierto |
+| **0.2 – 0.3** | Pastizales, agricultura de secano, sabanas |
+| **0.3 – 0.5** | Bosques abiertos, zonas agrícolas activas (cultivos en crecimiento) |
+| **0.5 – 0.7** | Bosques templados densos, cultivos con alta cobertura vegetal |
+| **\> 0.7** | Bosques tropicales, selvas, vegetación muy densa |
+
+Unidades: sin unidad.
+
+
+### **Chl-a** \- Concentración de clorofila
+
+El índice de clorofila-a se utiliza para estimar la concentración de clorofila-a en cuerpos de agua como océanos, lagos y ríos. La clorofila-a es el principal pigmento fotosintético presente en el fitoplancton, por lo que su concentración actúa como un indicador indirecto de la biomasa algal y de la productividad primaria en ecosistemas acuáticos, siendo un indicador clave para evaluar la calidad del agua y la salud de los ecosistemas acuáticos (Gitelson et al., 1993; IOCCG, 2000).
+
+Unidades: mg m-3.
+
+## **📊 Modelos** 
+
+### **Modelo de Pastos** \
+
+El modelo de producción de pastos integrado en la aplicación estima la Energía Metabólica Disponible (EMD) en Andalucía a partir de información ambiental y de vegetación. Para ello, delimita los pisos bioclimáticos según los criterios de Rivas-Martínez, aplica las ecuaciones de Passera Sassi (1999) en función del tipo de pasto y las condiciones climáticas, e incorpora capas de cobertura vegetal y precipitación. Además, se utiliza una medida de similitud (Distancia de Mahalanobis) para restringir el resultado a áreas con características ambientales equivalentes a los sitios originales de calibración. El producto final es un mapa de EMD que representa el potencial de recursos forrajeros en la región con distintos niveles de confianza.
+
+### **Modelo de Temperatura** \
+
+El modelo de predicción de temperatura combina los datos de los sensores TOMST TMS4 del Observatorio de Cambio Global de Sierra Nevada —que miden de forma continua la temperatura del suelo a tres profundidades (−8 cm, 2 cm y 15 cm)— con imágenes satelitales de Sentinel-2 y Landsat 8/9. Para cada sensor se toma el píxel satelital correspondiente al momento del dato y se integran además variables del terreno como la altitud, la pendiente o la orientación. Con esta información, la aplicación entrena modelos de regresión Random Forest, capaces de relacionar las observaciones satelitales con las condiciones reales medidas en campo. El resultado son mapas continuos de temperatura del suelo para cada profundidad, que permiten visualizar y analizar la variabilidad microclimática en zonas sin instrumentación directa.
 
 ## **💨 Nutrientes / Aerosoles** 
 ### **ARSL** \- Profundidad óptica atmosférica de aerosoles

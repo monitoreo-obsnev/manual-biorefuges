@@ -14,7 +14,7 @@ description: "Documentación de la herramienta MonitorEO-OBSNEV Bio-Refugios"
 
 # Introducción {#intro}
 
-[MonitorEO-OBSNEV](https://sl.ugr.es/monitoreoobsnev) es una herramienta de análisis de variables derivadas de teledetección satelital basada en Google Earth Engine desarrollada por el Observatorio de Cambio Global de Sierra Nevada (Universidad de Granada).
+[MonitorEO-OBSNEV Bio-Refugios](https://ee-ugr-default-project.projects.earthengine.app/view/biorefuges) es una herramienta de análisis de variables derivadas de teledetección satelital basada en Google Earth Engine desarrollada por el Observatorio de Cambio Global de Sierra Nevada (Universidad de Granada).
 
 Este manual de usuario proporciona una guía completa para el uso de MonitorEO-OBSNEV, incluyendo la descripción de funcionalidades, navegación por la interfaz, selección de parámetros y visualización de resultados.
 
